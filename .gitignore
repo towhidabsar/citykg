@@ -2,3 +2,5 @@ data/*
 data copy/*
 corenlp/*
 output/*
+pages/*
+*.props
