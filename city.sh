@@ -21,7 +21,7 @@
 ##SBATCH --mail-type=FAIL
  
 # Request 5 minutes run time MAX, if the job runs over it will be KILLED
-#SBATCH --time 0-4:00:0 #Time limit day-hrs:min:sec
+#SBATCH --time 0-24:00:0 #Time limit day-hrs:min:sec
 ##SBATCH --gres=gpu
 
 # Put the job in the partition associated with the account and request one core
@@ -37,5 +37,11 @@
 echo "I am a job..."
 echo "The city I am processing is $alpha"
 echo "And now I'm going to simulate doing work based on those parameters..."
-python localwiki.py --pages 0
+# python localwiki.py --kg islavista,westsac,norwalk,arlington-heights,denton,raleigh,bloomington-normal,davis,assabu,ann-arbor,tucson,natori,buffalo --port 9001
+python localwiki.py --kg toronto,islavista,westsac,norwalk,arlington-heights,denton,raleigh,bloomington-normal,davis,assabu,ann-arbor,tucson,natori,buffalo --port 9001
+python localwiki.py --kg akron,richmond-va,adelaide-hills,tomi,attica,seattle,main-ja,haddonfield,conway --port 9001
+# akron,richmond-va,adelaide-hills,tomi,attica,seattle,main-ja,haddonfield,conway
+python localwiki.py --kg oakland,kamitonda,taipeicommunity,mappain,oly,baoding,ina,liverpool,fujisawa,agu --port 9001
+python localwiki.py --kg odawara,tb,kudo,sfsu,sonoma-valley,boise,tulsa,yuba-sutter,montaloma,santacruz,alamance,syracuse,ing,ithaca --port 9001
+python localwiki.py --kg kitchener,hirakata,philomath,slo,twincities,gr,rock-island,canton,miami,cu,pei,chico --port 9001
 echo "All done with my work.  Exiting."
